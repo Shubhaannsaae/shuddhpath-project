@@ -134,11 +134,6 @@ GOOGLE_CLIENT_SECRET=
 NEXTAUTH_SECRET=
 DATABASE_URL=
 
-
-## License
-
-This project is licensed under the MIT License - see the [LICENSE](LICENSE) file for details.
-
 ## Acknowledgments
 
 - Clear Skies Challenge 2025 by IIT Tirupati
