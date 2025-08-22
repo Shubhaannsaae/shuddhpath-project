@@ -1,0 +1,28 @@
+generator client {
+  provider = "prisma-client-js"
+}
+
+datasource db {
+  provider = "postgresql"
+  url      = env("DATABASE_URL")
+}
+
+model Station {
+  id         Int         @id @default(autoincrement())
+  name       String
+  latitude   Float
+  longitude  Float
+  aqiRecords AQIRecord[]
+}
+
+model AQIRecord {
+  id          Int      @id @default(autoincrement())
+  station     Station  @relation(fields: [stationId], references: [id])
+  stationId   Int
+  timestamp   DateTime
+  temperature Float
+  humidity    Float
+  pm25        Float
+  pm10        Float
+  co2         Float
+}
